@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+
+my:
+   servers:
+       - name: A
+         description: foo.bar.A
+       - name: B
+         description: foo.bar.B
