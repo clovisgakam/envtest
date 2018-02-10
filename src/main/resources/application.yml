@@ -1,7 +1,3 @@
-server:
-  port: 8081
-
-
 my:
    servers:
        - name: A

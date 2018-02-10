@@ -1,0 +1,12 @@
+FROM appuio/s2i-maven-java
+MAINTAINER clovis
+USER root
+RUN mkdir /opt/.m2
+RUN set M2_REPO=/opt/.m2
+RUN chown -R 1001:1001 /opt/.m2
+WORKDIR /opt/app-root
+COPY . .
+RUN ["mvn", "clean", "package"]
+EXPOSE 8080
+USER 1001
+CMD exec $JAVA_HOME/bin/java $JAVA_OPTS -jar ./target/envTest-0.0.1-SNAPSHOT.jar
