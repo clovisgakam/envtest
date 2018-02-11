@@ -5,7 +5,9 @@ package de.adorsys.test;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
+@PropertySource(value = "${sample.properties.file}", ignoreResourceNotFound = false)
 @ConfigurationProperties(prefix="my")
 public class Config {
 

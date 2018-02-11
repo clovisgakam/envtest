@@ -1,0 +1,6 @@
+my:
+   servers:
+       - name: A
+         description: foo.bar.A
+       - name: B
+         description: foo.bar.B
